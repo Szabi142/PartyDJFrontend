@@ -1,0 +1,14 @@
+.player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #723B13;
+    width: 100vh;
+    height: auto;
+    padding: 10px;
+}
+
+.track {
+    display: flex;
+    text-align: left;
+}

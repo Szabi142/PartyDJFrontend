@@ -1,0 +1,14 @@
+<h1>Login</h1>
+<div class="login">
+    <form class="form" (ngSubmit)="Login()" #registerForm="ngForm">
+        <label for="email">Email <span style="color:red;">*</span><br></label>
+        <input type="email" class="form-control" id="email" name="email" ngModel>
+
+        <label for="password">Password <span style="color:red;">*</span><br></label>
+        <input type="password" class="form-control" id="password" name="password" ngModel>
+
+        <button type="submit" class="btn btn-light">LOG IN</button>
+    </form>
+    <a href="Register">Don't have an account?</a>
+</div>
+<a href="" class="go-back"><img src="/assets/icons/arrow-left-short.svg" alt="Bootstrap" width="32" height="32" class="svg-black">Go back</a>

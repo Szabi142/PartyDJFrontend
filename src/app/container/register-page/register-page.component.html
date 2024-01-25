@@ -1,0 +1,20 @@
+<h1>Register</h1>
+<div class="login">
+    <form class="form" (ngSubmit)="Register()" #registerForm="ngForm">
+        <label for="username">Username <span style="color:red;">*</span><br></label>
+        <input type="text" class="form-control" id="username" name="username" ngModel>
+
+        <label for="email">Email <span style="color:red;">*</span><br></label>
+        <input type="email" class="form-control" id="email" name="email" ngModel>
+
+        <label for="password">Password <span style="color:red;">*</span><br></label>
+        <input type="password" class="form-control" id="password" name="password" ngModel>
+
+        <label for="confirmPassword">Confirm password <span style="color:red;">*</span><br></label>
+        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" ngModel>
+
+        <button type="submit" class="btn btn-light">REGISTER</button>
+    </form>
+    <a href="Login">Already have an account?</a>
+</div>
+<a href="" class="go-back"><img src="/assets/icons/arrow-left-short.svg" alt="Bootstrap" width="32" height="32" class="svg-black">Go back</a>

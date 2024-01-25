@@ -1,0 +1,16 @@
+<div class="player" [ngStyle]="{color: spotify ? 'green': 'red'}">
+    <div class="track">
+        <div class="picture">
+            <img src="/assets/icons/disc-fill.svg" alt="Bootstrap" width="50" height="50" class="svg-black">
+        </div>
+        <div>
+            {{title}}<br>
+            <span style="color: #9CA3AF;">{{artist}}</span>
+        </div>
+        
+    </div>
+    <div class="buttons">
+        <a><img src="/assets/icons/play-circle.svg" alt="Bootstrap" width="40" height="40" class="svg-black"></a>
+        <a><img src="/assets/icons/skip-end-fill.svg" alt="Bootstrap" width="40" height="40" class="svg-black"></a>
+    </div>
+</div>

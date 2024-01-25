@@ -1,0 +1,14 @@
+.top-menu {
+    display: flex;
+}
+
+a {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #9CA3AF;
+}
+
+a:hover { 
+    color: white;
+} 

@@ -1,0 +1,13 @@
+.header {
+    height: 6vh;
+	background-color: #111827;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*position: fixed;*/
+}
+
+/*.banner {
+    
+}*/

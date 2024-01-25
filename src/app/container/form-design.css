@@ -1,0 +1,33 @@
+* {
+    text-align: center;
+}
+
+.form-control {
+    background-color: #111827;
+    color: white;
+    margin-bottom: 10px;
+    border: 0;
+    padding: 5px;
+}
+
+a {
+    color: #9CA3AF;
+}
+
+button {
+    margin: 5px;
+}
+
+/*.form-control {
+    width: 10vh;
+}*/
+
+.login {
+    background-color: #374151;
+    padding: 20px;
+}
+
+.go-back {
+    text-decoration: none;
+    color: white;
+}

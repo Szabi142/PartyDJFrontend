@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #4B5563;
+    font-family: "Inter"
+}
+
+.svg-white {
+    filter: invert(84%) sepia(67%) saturate(3048%) hue-rotate(209deg) brightness(136%) contrast(105%);
+}
+
+.svg-black {
+    filter: invert(0%) sepia(4%) saturate(7485%) hue-rotate(221deg) brightness(98%) contrast(105%);
+}
+
+* {
+    color: white;
+}
+html, body { height: 100%; }
+/*body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }*/

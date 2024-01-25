@@ -1,0 +1,14 @@
+<h1>Join party</h1>
+<div class="login">
+    <form class="form" (ngSubmit)="Join()" #registerForm="ngForm">
+        <label for="partyName">Party name <span style="color:red;">*</span><br></label>
+        <input type="text" class="form-control" id="partyName" name="partyName" ngModel>
+
+        <label for="password">Password<br></label>
+        <input type="teyt" class="form-control" id="password" name="password" ngModel>
+
+        <button type="submit" class="btn btn-light">JOIN PARTY</button>
+    </form>
+    <a href="Create">Create a party instead!</a>
+</div>
+<a href="" class="go-back"><img src="/assets/icons/arrow-left-short.svg" alt="Bootstrap" width="32" height="32" class="svg-black">Go back</a>
