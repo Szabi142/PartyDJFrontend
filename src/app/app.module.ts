@@ -20,6 +20,7 @@ import { RegisterPageComponent } from './container/register-page/register-page.c
 import { NotFoundPageComponent } from './container/not-found-page/not-found-page.component';
 import { SettingsPageComponent } from './container/settings-page/settings-page.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 const routes: Routes = [
   //{path: '', component: WelcomePageComponent},
@@ -59,7 +60,8 @@ const routes: Routes = [
     BrowserModule,
     NgbModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
