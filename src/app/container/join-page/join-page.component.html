@@ -1,10 +1,10 @@
 <h1>Join party</h1>
 <div class="login">
-    <form class="form" (ngSubmit)="Join()" #registerForm="ngForm">
-        <label for="partyName">Party name <span style="color:red;">*</span><br></label>
+    <form class="form" #joinForm="ngForm" (ngSubmit)="Join(joinForm)">
+        <label for="partyName">Party name <span style="color:red;">*</span></label><br>
         <input type="text" class="form-control" id="partyName" name="partyName" ngModel>
 
-        <label for="password">Password<br></label>
+        <label for="password">Password</label><br>
         <input type="teyt" class="form-control" id="password" name="password" ngModel>
 
         <button type="submit" class="btn btn-light" onclick="window.location.href='Party'">JOIN PARTY</button>

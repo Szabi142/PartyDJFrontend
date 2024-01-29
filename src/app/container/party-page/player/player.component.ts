@@ -10,4 +10,5 @@ export class PlayerComponent {
   artist:string = "Track artist comes here";
 
   spotify:boolean = true;
+  
 }

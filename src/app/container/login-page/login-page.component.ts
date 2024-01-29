@@ -10,10 +10,9 @@ export class LoginPageComponent {
   username: string;
   password: string;
 
-  @ViewChild('registerForm') form: NgForm;
-  Login() {
-    this.username = this.form.value.username;
-    this.password = this.form.value.password;
+  Login(form: NgForm) {
+    this.username = form.value.username;
+    this.password = form.value.password;
 
     console.log("Username: " + this.username);
     console.log("Password: " + this.password);

@@ -1,19 +1,19 @@
 <h1>Register</h1>
 <div class="login">
-    <form class="form" (ngSubmit)="Register()" #registerForm="ngForm">
-        <label for="username">Username <span style="color:red;">*</span><br></label>
+    <form class="form" #registerForm="ngForm" (ngSubmit)="Register(registerForm)">
+        <label for="username">Username <span style="color:red;">*</span></label><br>
         <input type="text" class="form-control" id="username" name="username" ngModel>
 
-        <label for="email">Email <span style="color:red;">*</span><br></label>
+        <label for="email">Email <span style="color:red;">*</span></label><br>
         <input type="email" class="form-control" id="email" name="email" ngModel>
 
-        <label for="password">Password <span style="color:red;">*</span><br></label>
+        <label for="password">Password <span style="color:red;">*</span></label><br>
         <input type="password" class="form-control" id="password" name="password" ngModel>
 
-        <label for="confirmPassword">Confirm password <span style="color:red;">*</span><br></label>
+        <label for="confirmPassword">Confirm password <span style="color:red;">*</span></label><br>
         <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" ngModel>
 
-        <button type="submit" class="btn btn-light" onclick="window.location.href='Login'">REGISTER</button>
+        <button type="submit" class="btn btn-light" >REGISTER</button>
     </form>
     <a href="Login">Already have an account?</a>
 </div>

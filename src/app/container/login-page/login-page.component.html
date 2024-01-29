@@ -1,10 +1,10 @@
 <h1>Login</h1>
 <div class="login">
-    <form class="form" (ngSubmit)="Login()" #registerForm="ngForm">
-        <label for="email">Email <span style="color:red;">*</span><br></label>
+    <form class="form" #loginForm="ngForm" (ngSubmit)="Login(loginForm)">
+        <label for="email">Email <span style="color:red;">*</span></label><br>
         <input type="email" class="form-control" id="email" name="email" ngModel>
 
-        <label for="password">Password <span style="color:red;">*</span><br></label>
+        <label for="password">Password <span style="color:red;">*</span></label><br>
         <input type="password" class="form-control" id="password" name="password" ngModel>
 
         <button type="submit" class="btn btn-light" onclick="window.location.href='Select'">LOG IN</button>

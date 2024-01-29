@@ -10,10 +10,9 @@ export class JoinPageComponent {
   partyName: string;
   password: string;
 
-  @ViewChild('registerForm') form: NgForm;
-  Join() {
-    this.partyName = this.form.value.partyName;
-    this.password = this.form.value.password;
+  Join(form: NgForm) {
+    this.partyName = form.value.partyName;
+    this.password = form.value.password;
 
     console.log("Name: " + this.partyName);
     console.log("Password: " + this.password);
