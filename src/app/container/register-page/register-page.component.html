@@ -8,16 +8,17 @@
         <input type="email" class="form-control" id="email" name="email" ngModel required email>
 
         <label for="password">Password <span style="color:red;">*</span></label><br>
-        <input type="password" class="form-control" id="password" name="password" ngModel required minlength="6" pattern="^\S*$" onchange="CompareFields('password','confirmPassword',true)">
+        <input type="password" class="form-control" id="password" name="password" ngModel required minlength="6" pattern="^\S*$">
 
         <label for="confirmPassword">Confirm password <span style="color:red;">*</span></label><br>
-        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" ngModel required minlength="6" pattern="^\S*$" onchange="CompareFields('password','confirmPassword',true)">
+        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" ngModel required minlength="6" pattern="^\S*$">
 
-        <button type="submit" class="btn btn-light"  [disabled]="!registerForm.valid">REGISTER</button>
+        <button type="submit" class="btn btn-light" onclick="window.location.href='Login'" [disabled]="!registerForm.valid">REGISTER</button>
     </form>
     <a href="Login">Already have an account?</a>
 </div>
-<a href="" class="go-back"><img src="/assets/icons/arrow-left-short.svg" onclick="window.location.href='Login'" alt="Bootstrap" width="32" height="32" class="svg-black">Go back</a>
+<a href="" class="go-back"><img src="/assets/icons/arrow-left-short.svg" alt="Bootstrap" width="32" height="32" class="svg-black">Go back</a>
 
 <!--TODO: password check-->
 <!--TODO: account check-->
+<!--TODO: REGISTER gomb csak akkor ugorjon LOGIN-ra, ha a feltételek teljesülnek-->
