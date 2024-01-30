@@ -1,47 +1,44 @@
-<div class="login">
-    <form class="form">
+<div class="formContainer">
+    <form class="form" #profileInformationForm="ngForm" (ngSubmit)="ProfileInformation(profileInformationForm)">
         <h2>Profile information</h2>
 
-        <label for="name">Name</label><br>
-        <input type="text" class="form-control" id="name" name="name" ngModel>
-
         <label for="username">Username</label><br>
-        <input type="text" class="form-control" id="username" name="username" ngModel>
+        <input type="text" placeholder="ORIGINAL USERNAME" class="form-control" id="username" name="username" ngModel minlength="3" maxlength="32" pattern="[A-Z]|[a-z]|[0-9]|_">
 
         <label for="email">Email</label><br>
-        <input type="text" class="form-control" id="email" name="email" ngModel>
+        <input type="text" placeholder="ORIGINAL EMAIL" class="form-control" id="email" name="email" ngModel email>
 
         <button type="submit" class="btn btn-light">SAVE</button>
     </form>
 </div>
 <br>
 
-<div class="login">
-    <form class="form">
+<div class="formContainer">
+    <form class="form" #updatePassword="ngForm" (ngSubmit)="UpdatePassword(updatePassword)">
         <h2>Update password</h2>
         <p>Ensure your account is using a long, random password to stay secure.</p>
 
-        <label for="name">Current password</label><br>
-        <input type="text" class="form-control" id="curretPassnword" name="name" ngModel>
+        <label for="currentPassword">Current password <span style="color:red;">*</span></label><br>
+        <input type="text" class="form-control" id="currentPassword" name="name" ngModel required minlength="6" pattern="^\S*$">
 
-        <label for="name">New password</label><br>
-        <input type="text" class="form-control" id="newPassword" name="name" ngModel>
+        <label for="newPassword">New password <span style="color:red;">*</span></label><br>
+        <input type="text" class="form-control" id="newPassword" name="name" ngModel required minlength="6" pattern="^\S*$">
 
-        <label for="name">Confirm new password</label><br>
-        <input type="text" class="form-control" id="confirmNewPassword" name="name" ngModel>
+        <label for="confirmNewPassword">Confirm new password <span style="color:red;">*</span></label><br>
+        <input type="text" class="form-control" id="confirmNewPassword" name="name" ngModel required minlength="6" pattern="^\S*$">
 
         <button type="submit" class="btn btn-light">SAVE</button>
     </form>
 </div>
 <br>
 
-<div class="login">
+<div class="formContainer">
     <h2>Platform management</h2>
     <p>...</p>
 </div>
 <br>
 
-<div class="login">
+<div class="formContainer">
     <h2>Delete Account</h2>
     <p>Once your account is deleted, all of its resources and data Will be permanently deleted.<br>
     Before deleting your account, please download any data or information that you wish to retain.</p>

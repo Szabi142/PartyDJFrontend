@@ -11,24 +11,12 @@ import { User } from 'src/app/Model/User';
 export class RegisterPageComponent {
   http: HttpClient = inject(HttpClient)
 
-  /*name: string;
-  username: string;
-  email: string;
-  password: string;*/
   userData: User;
 
   Register(form: NgForm) {
-    /*this.name = "";
-    this.username = form.value.username;
-    this.email = form.value.email;
-    this.password = form.value.password;*/
-
-    /*console.log("Name: " + this.name);
-    console.log("Username: " + this.username);
-    console.log("Email: " + this.email);
-    console.log("Password: " + this.password);*/
-
     this.userData = new User(form.value.email, form.value.username, form.value.password);
+
+    console.log(form);
 
     console.log(this.userData);
 

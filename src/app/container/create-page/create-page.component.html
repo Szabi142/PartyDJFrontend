@@ -1,13 +1,13 @@
 <h1>Create party</h1>
-<div class="login">
+<div class="formContainer">
     <form class="form" #createForm="ngForm" (ngSubmit)="Create(createForm)">
         <label for="partyName">Party name <span style="color:red;">*</span></label><br>
-        <input type="text" class="form-control" id="partyName" name="partyName" ngModel>
+        <input type="text" class="form-control" id="partyName" name="partyName" ngModel required minlength="3" maxlength="32" pattern="[A-Z]|[a-z]|[0-9]|_">
 
         <label for="password">Password</label><br>
         <input type="teyt" class="form-control" id="password" name="password" ngModel>
 
-        <button type="submit" class="btn btn-light" onclick="window.location.href='Party'">CREATE PARTY</button>
+        <button type="submit" class="btn btn-light" onclick="window.location.href='Party'" [disabled]="!createForm.valid">CREATE PARTY</button>
     </form>
     <a href="Join">Join another party!</a>
 </div>

@@ -6,7 +6,7 @@
     padding: 5px;
 }
 
-.login {
+.formContainer {
     background-color: #111827;
     padding: 20px;
 }
@@ -17,4 +17,17 @@ button {
 
 p, label {
     color: #9CA3AF;
+}
+
+::placeholder {
+    color: #9CA3AF;
+    opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: #9CA3AF;
+  }
+
+input.ng-invalid.ng-touched {
+    border: red 1px solid;
 }

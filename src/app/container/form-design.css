@@ -22,7 +22,7 @@ button {
     width: 10vh;
 }*/
 
-.login {
+.formContainer {
     background-color: #374151;
     padding: 20px;
 }
@@ -30,4 +30,8 @@ button {
 .go-back {
     text-decoration: none;
     color: white;
+}
+
+input.ng-invalid.ng-touched {
+    border: red 1px solid;
 }

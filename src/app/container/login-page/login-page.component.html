@@ -1,13 +1,13 @@
 <h1>Login</h1>
-<div class="login">
+<div class="formContainer">
     <form class="form" #loginForm="ngForm" (ngSubmit)="Login(loginForm)">
         <label for="email">Email <span style="color:red;">*</span></label><br>
-        <input type="email" class="form-control" id="email" name="email" ngModel>
+        <input type="email" class="form-control" id="email" name="email" ngModel required email>
 
         <label for="password">Password <span style="color:red;">*</span></label><br>
-        <input type="password" class="form-control" id="password" name="password" ngModel>
+        <input type="password" class="form-control" id="password" name="password" ngModel required minlength="6" pattern="^\S*$">
 
-        <button type="submit" class="btn btn-light" onclick="window.location.href='Select'">LOG IN</button>
+        <button type="submit" class="btn btn-light" onclick="window.location.href='Select'" [disabled]="!loginForm.valid">LOG IN</button>
     </form>
     <a href="Register">Don't have an account?</a>
 </div>
