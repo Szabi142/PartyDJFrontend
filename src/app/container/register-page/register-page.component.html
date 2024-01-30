@@ -1,6 +1,6 @@
 <h1>Register</h1>
 <div class="formContainer">
-    <form class="form" #registerForm="ngForm" (ngSubmit)="Register(registerForm)">
+    <!-- <form class="form" #registerForm="ngForm" (ngSubmit)="Register(registerForm)">
         <label for="username">Username <span style="color:red;">*</span></label><br>
         <input type="text" class="form-control" id="username" name="username" ngModel required minlength="3" maxlength="32" pattern="[A-Z]|[a-z]|[0-9]|_">
 
@@ -13,12 +13,27 @@
         <label for="confirmPassword">Confirm password <span style="color:red;">*</span></label><br>
         <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" ngModel required minlength="6" pattern="^\S*$">
 
-        <button type="submit" class="btn btn-light" onclick="window.location.href='Login'" [disabled]="!registerForm.valid">REGISTER</button>
+        <button type="submit" class="btn btn-light"  [disabled]="registerForm.invalid">REGISTER</button>
+    </form> -->
+
+    <form [formGroup]="registerForm" (ngSubmit)="Register()" novalidate>
+        Username <span style="color:red;">*</span><br>
+        <input type="text" class="form-control" formControlName="username" required minlength="3" maxlength="32" pattern="[A-Z]|[a-z]|[0-9]|_">
+
+        Email <span style="color:red;">*</span><br>
+        <input type="email" class="form-control" formControlName="email" required email>
+
+        Password <span style="color:red;">*</span><br>
+        <input type="password" class="form-control" formControlName="password" required minlength="6" pattern="^\S*$">
+
+        Confirm password <span style="color:red;">*</span><br>
+        <input type="password" class="form-control" formControlName="confirmPassword" required minlength="6" pattern="^\S*$">
+
+        <button class="btn btn-light" [disabled]="registerForm.invalid" onclick="window.location.href='Login'">REGISTER</button>
     </form>
     <a href="Login">Already have an account?</a>
 </div>
 <a href="" class="go-back"><img src="/assets/icons/arrow-left-short.svg" alt="Bootstrap" width="32" height="32" class="svg-black">Go back</a>
 
-<!--TODO: password check-->
-<!--TODO: account check-->
+<!--TODO: account/email check-->
 <!--TODO: REGISTER gomb csak akkor ugorjon LOGIN-ra, ha a feltételek teljesülnek-->

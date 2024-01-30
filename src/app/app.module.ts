@@ -19,7 +19,7 @@ import { JoinPageComponent } from './container/join-page/join-page.component';
 import { RegisterPageComponent } from './container/register-page/register-page.component';
 import { NotFoundPageComponent } from './container/not-found-page/not-found-page.component';
 import { SettingsPageComponent } from './container/settings-page/settings-page.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 
 const routes: Routes = [
@@ -61,7 +61,8 @@ const routes: Routes = [
     NgbModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [ContainerComponent],
   bootstrap: [AppComponent]

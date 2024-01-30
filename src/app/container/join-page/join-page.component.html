@@ -7,7 +7,7 @@
         <label for="password">Password</label><br>
         <input type="teyt" class="form-control" id="password" name="password" ngModel>
 
-        <button type="submit" class="btn btn-light" onclick="window.location.href='Party'" [disabled]="!joinForm.valid">JOIN PARTY</button>
+        <button type="submit" class="btn btn-light" onclick="window.location.href='Party'" [disabled]="joinForm.invalid">JOIN PARTY</button>
     </form>
     <a href="Create">Create a party instead!</a>
 </div>

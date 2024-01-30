@@ -7,7 +7,7 @@
         <label for="password">Password <span style="color:red;">*</span></label><br>
         <input type="password" class="form-control" id="password" name="password" ngModel required minlength="6" pattern="^\S*$">
 
-        <button type="submit" class="btn btn-light"  [disabled]="!loginForm.valid">LOG IN</button>
+        <button type="submit" class="btn btn-light"  [disabled]="loginForm.invalid">LOG IN</button>
     </form>
     <a href="Register">Don't have an account?</a>
 </div>

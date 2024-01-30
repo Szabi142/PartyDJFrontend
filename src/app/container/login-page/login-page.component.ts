@@ -30,7 +30,7 @@ export class LoginPageComponent /*implements OnInit*/{
     
     //this.userData.email = String(this.http.get('http://localhost:8080/api/v1/user/USERNAME'));
     //this.userData.password = String(this.http.get('http://localhost:8080/api/v1/user/PASSWORD'));
-    this.userData = new User("", form.value.username, form.value.password);
+    this.userData = new User("bull@shit.com", form.value.username, form.value.password);
 
     console.log(this.userData);
 
