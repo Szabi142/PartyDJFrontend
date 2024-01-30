@@ -63,7 +63,7 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ContainerComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

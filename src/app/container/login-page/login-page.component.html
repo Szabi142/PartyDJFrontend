@@ -1,14 +1,16 @@
 <h1>Login</h1>
 <div class="formContainer">
     <form class="form" #loginForm="ngForm" (ngSubmit)="Login(loginForm)">
-        <label for="email">Email <span style="color:red;">*</span></label><br>
-        <input type="email" class="form-control" id="email" name="email" ngModel required email>
+        <label for="username">Username <span style="color:red;">*</span></label><br>
+        <input type="username" class="form-control" id="username" name="username" ngModel required minlength="3" maxlength="32" pattern="[A-Z]|[a-z]|[0-9]|_">
 
         <label for="password">Password <span style="color:red;">*</span></label><br>
         <input type="password" class="form-control" id="password" name="password" ngModel required minlength="6" pattern="^\S*$">
 
-        <button type="submit" class="btn btn-light" onclick="window.location.href='Select'" [disabled]="!loginForm.valid">LOG IN</button>
+        <button type="submit" class="btn btn-light"  [disabled]="!loginForm.valid">LOG IN</button>
     </form>
     <a href="Register">Don't have an account?</a>
 </div>
 <a href="" class="go-back"><img src="/assets/icons/arrow-left-short.svg" alt="Bootstrap" width="32" height="32" class="svg-black">Go back</a>
+
+<!--onclick="window.location.href='Select'"-->

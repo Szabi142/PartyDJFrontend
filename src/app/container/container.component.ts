@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from '../Model/User';
 
 @Component({
   selector: 'container',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./container.component.css']
 })
 export class ContainerComponent {
-  actualPage:string = 'welcome-page';
+  
 }

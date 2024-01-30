@@ -10,19 +10,13 @@ import { User } from 'src/app/Model/User';
 })
 export class RegisterPageComponent {
   http: HttpClient = inject(HttpClient)
-
   userData: User;
 
   Register(form: NgForm) {
     this.userData = new User(form.value.email, form.value.username, form.value.password);
 
-    console.log(form);
-
     console.log(this.userData);
 
     this.http.post('http://localhost:8080/api/v1/user', this.userData).subscribe((response)=>{console.log(response)});
   }
-
-  //TODO: adatok ellenőrzése
-
 }
