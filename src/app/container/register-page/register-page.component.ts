@@ -32,7 +32,7 @@ export class RegisterPageComponent {
 
     console.log(this.userData);
 
-    this.http.post('http://sabian.tplinkdns.com:8080/api/v1/user', this.userData).subscribe((response)=>{console.log(response)});
+    this.http.post('http://localhost:8080/api/v1/user', this.userData).subscribe((response)=>{console.log(response)});
   }
 
   //TODO: adatok ellenőrzése
