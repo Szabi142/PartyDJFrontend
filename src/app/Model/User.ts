@@ -5,3 +5,10 @@ export class User {
         public password: string,
     ) { }
 }
+
+export class Login {
+    constructor(
+        public username: string,
+        public password: string,
+    ) { }
+}
